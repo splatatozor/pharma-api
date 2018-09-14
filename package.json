@@ -1,0 +1,23 @@
+{
+  "name": "pharma-api",
+  "version": "1.0.0",
+  "description": "This is a web app project",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/splatatozor/pharma-api.git"
+  },
+  "author": "Kabbaj samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/splatatozor/pharma-api/issues"
+  },
+  "homepage": "https://github.com/splatatozor/pharma-api#readme"
+}
