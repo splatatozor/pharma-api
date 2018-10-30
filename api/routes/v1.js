@@ -9,6 +9,12 @@ router.get('/pharmacies', function(req, res, next) {
 	db.getConnection().then((conn) => {
 		conn.query('SELECT * from pharmacies', function (error, results, fields) {
 			if (error) throw error;
+			results.map(result => {
+				result.coords = {
+					longitude: result.longitude_pharmacies,
+					latitude: result.latitude_pharmacies
+				}
+			}) 
 			res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
 			conn.release();
 		});
