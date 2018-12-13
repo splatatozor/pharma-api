@@ -1,8 +1,11 @@
 const pharmaciesController = require('../controllers/pharmacies');
 const drugsController = require('../controllers/drugs');
+const routerController = require('../controllers/router');
 const express = require('express');
 const router = express.Router();
 
+
+router.get('/healthz', routerController.healthz);
 
 router.get('/pharmacies', pharmaciesController.getPharmacies);
 
