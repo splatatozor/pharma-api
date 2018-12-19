@@ -11,7 +11,21 @@ async function getRequestsByDrug(req, res, next) {
     return res.status(200).json(results)
 }
 
+async function getRequestsStatDrug(req, res, next) {
+    var idDrug = req.params.id
+    const results = await modelRequests.getRequestsStatDrug()
+    return res.status(200).json(results)
+}
+
+async function getRequestsStatPharma(req, res, next) {
+    var idDrug = req.params.id
+    const results = await modelRequests.getRequestsStatPharma()
+    return res.status(200).json(results)
+}
+
 module.exports = {
     getRequests,
     getRequestsByDrug,
+    getRequestsStatDrug,
+    getRequestsStatPharma
 };
