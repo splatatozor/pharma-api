@@ -28,8 +28,8 @@ router.get('/request', requestController.getRequests);
 
 router.get('/request/id/:id', requestController.getRequestsByDrug);
 
-router.get('/request/stat/request/drug', requestController.getRequestsStatDrug);
+router.get('/request/stat/drug', requestController.getRequestsStatDrug);
 
-router.get('/request/stat/request/pharma', requestController.getRequestsStatPharma);
+router.get('/request/stat/pharma', requestController.getRequestsStatPharma);
 
 module.exports = router;
