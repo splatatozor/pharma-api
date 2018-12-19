@@ -22,7 +22,7 @@ async function getRequestsStatDrug()  {
     var query = `SELECT d.label, COUNT(rpd.id_drug) as countRequest ` 
     query += `FROM drugs d `
     query += `INNER JOIN request_pharmacies_drugs rpd ON rpd.id_drug = d.id `
-    query += `GROUP BY d.label`
+    query += `GROUP BY d.label `
     query += `ORDER BY countRequest DESC `
     query += `LIMIT 20;`
     const results = await pool.query(query)
@@ -37,7 +37,7 @@ async function getRequestsStatPharma()  {
     var query = `SELECT p.label, COUNT(rpd.id_pharma) as countRequest ` 
     query += `FROM pharmacies p `
     query += `INNER JOIN request_pharmacies_drugs rpd ON rpd.id_drug = p.id `
-    query += `GROUP BY p.label`
+    query += `GROUP BY p.label `
     query += `ORDER BY countRequest DESC `
     query += `LIMIT 20;`
     const results = await pool.query(query)
