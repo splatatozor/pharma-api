@@ -12,7 +12,21 @@ async function getDrugsById(req, res, next) {
     return res.status(200).json(results)
 }
 
+async function getDrugsStatCompany(req, res, next) {
+    const id = req.params.id
+    const results = await modelDrugs.getDrugsStatCompany()
+    return res.status(200).json(results)
+}
+
+async function getDrugsStatQuantity(req, res, next) {
+    const id = req.params.id
+    const results = await modelDrugs.getDrugsStatQuantity()
+    return res.status(200).json(results)
+}
+
 module.exports = {
     getDrugsById,
-	getDrugsByLabel,
+    getDrugsByLabel,
+    getDrugsStatCompany,
+    getDrugsStatQuantity
 };
